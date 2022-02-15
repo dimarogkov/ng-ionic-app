@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-button slot="start" fill="clear" color="light">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
+    <ion-title>My App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt>
+      </ion-avatar>
+      <ion-label>
+        <h1>Dmitriy Rogkov</h1>
+        <p>Gathered: <span class="money">$ 40,00</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <app-pickcup-call-card
+    status="On hold"
+    date="22/04/2021"
+    time="16:34:22"
+    createdAt="24/04/2021"
+    notes="e have to bags that are full, one is plastic and the other one is glasses">
+    <ion-card-header header>
+      <ion-card-subtitle>Last Pickup Call</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-button footer color="success" fill="clear" size="full">See all...</ion-button>
+  </app-pickcup-call-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
