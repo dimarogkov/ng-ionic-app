@@ -1,14 +1,15 @@
 <ion-header>
   <ion-toolbar color="success">
-    <ion-button slot="start" fill="clear">
+    <ion-buttons slot="start">
       <ion-back-button text=""></ion-back-button>
-    </ion-button>
+    </ion-buttons>
+
     <ion-title>Pickcup Call</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img src="https://openmaptiles.org/img/home-banner-map.png" all="map">
+  <img src="https://docs.microsoft.com/ru-ru/azure/azure-maps/media/migrate-google-maps-web-app/azure-maps-custom-html-marker.png" all="map">
 
   <ion-card>
     <ion-card-content>
@@ -26,5 +27,5 @@
     </ion-item>
   </ion-list>
 
-  <ion-button color="success" size="full">Create Pickcup Call</ion-button>
+  <ion-button color="success" size="full" (click)="addPickcupCall()">Create Pickcup Call</ion-button>
 </ion-content>
