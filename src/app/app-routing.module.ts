@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'pickcup-calls',
     loadChildren: () => import('./pages/pickcup-calls/pickcup-calls.module').then( m => m.PickcupCallsPageModule)
   },
+  {
+    path: 'plagins',
+    loadChildren: () => import('./pages/plagins/plagins.module').then( m => m.PlaginsPageModule)
+  },
   
 ];
 

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Native Plagins</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="plagins-block">
+    <ion-button size="full" color="success" (click)="getGeolocation()">Geolocation</ion-button>
+    <ion-button size="full" color="success" (click)="getCamera()">Camera</ion-button>
+  </div>
+
+  <img [src]="clickedImage" />
+</ion-content>
