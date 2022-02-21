@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
+import { Network } from '@awesome-cordova-plugins/network/ngx';
 
 @Component({
   selector: 'app-plagins',
   templateUrl: './plagins.page.html',
   styleUrls: ['./plagins.page.scss'],
-  providers: [Geolocation, Camera]
+  providers: [Geolocation, Camera, Network]
 })
 export class PlaginsPage implements OnInit {
 
@@ -19,7 +20,7 @@ export class PlaginsPage implements OnInit {
     mediaType: this.camera.MediaType.PICTURE
   }
 
-  constructor(private geolocation: Geolocation, private camera: Camera) {}
+  constructor(private geolocation: Geolocation, private camera: Camera, private network: Network) {}
 
   ngOnInit() {}
 
@@ -36,6 +37,22 @@ export class PlaginsPage implements OnInit {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.clickedImage = base64Image;
     });
+  }
+
+  getNetwork() {
+    this.network.onDisconnect().subscribe(() => {
+      console.log('network was disconnected');
+    });
+
+    this.network.onConnect().subscribe(() => {
+      console.log('network connected!');
+
+      setTimeout(() => {
+        if (this.network.type === 'wifi') {
+          console.log('we got a wifi connection, woohoo!');
+        }
+      }, 3000);
+    })
   }
 
 }
