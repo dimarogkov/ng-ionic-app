@@ -29,7 +29,7 @@ export class PlaginsPage implements OnInit {
       console.log(data.coords.latitude);
       console.log(data.coords.longitude);
     });
-    this.geolocation.watchPosition().subscribe(data => console.log(data));
+    // this.geolocation.watchPosition().subscribe(data => console.log(data));
   }
 
   getCamera() {

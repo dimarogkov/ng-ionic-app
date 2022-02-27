@@ -4,11 +4,46 @@
       <ion-content>
         <ion-list id="inbox-list">
 
-          <ion-item lines="none" (click)="goToPlagins()">
+          <ion-item lines="none" (click)="goTo('plagins')">
             <ion-icon slot="start" name="phone-portrait-outline" color="success"></ion-icon>
             <ion-label color="success">Native Plugins</ion-label>
           </ion-item>
-
+          <ion-item lines="none" (click)="goTo('modals')">
+            <ion-icon slot="start" name="browsers-outline" color="success"></ion-icon>
+            <ion-label color="success">Modals</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('action-sheet')">
+            <ion-icon slot="start" name="list-outline" color="success"></ion-icon>
+            <ion-label color="success">Action Sheet</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('refresh')">
+            <ion-icon slot="start" name="reload-outline" color="success"></ion-icon>
+            <ion-label color="success">Refresh</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('alert')">
+            <ion-icon slot="start" name="globe-outline" color="success"></ion-icon>
+            <ion-label color="success">Alert</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('toast')">
+            <ion-icon slot="start" name="chatbox-outline" color="success"></ion-icon>
+            <ion-label color="success">Toast</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('accordion')">
+            <ion-icon slot="start" name="musical-note-outline" color="success"></ion-icon>
+            <ion-label color="success">Accordion</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('ion-loading')">
+            <ion-icon slot="start" name="time-outline" color="success"></ion-icon>
+            <ion-label color="success">Loading</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('segment')">
+            <ion-icon slot="start" name="fish-outline" color="success"></ion-icon>
+            <ion-label color="success">Segment</ion-label>
+          </ion-item>
+          <ion-item lines="none" (click)="goTo('popover')">
+            <ion-icon slot="start" name="radio-outline" color="success"></ion-icon>
+            <ion-label color="success">Popover</ion-label>
+          </ion-item>
         </ion-list>
 
       </ion-content>

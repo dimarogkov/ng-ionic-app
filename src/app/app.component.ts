@@ -9,8 +9,8 @@ import { MenuController } from '@ionic/angular';
 export class AppComponent {
   constructor(private router: Router, private menu: MenuController) {}
 
-  goToPlagins() {
+  goTo(link) {
     this.menu.close();
-    this.router.navigate(['plagins']);
+    this.router.navigate([link]);
   }
 }

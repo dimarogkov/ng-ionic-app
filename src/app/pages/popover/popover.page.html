@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Popover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <!-- Use a trigger -->
+  <ion-button size="full" color="success" id="triggerBtn">Default Popover</ion-button>
+  <ion-popover trigger="triggerBtn" reference="event" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Option 1</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Option 2</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Option 3</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+
+  <!-- Nested Popover -->
+  <ion-button size="full" color="success" id="nestedBtn">Nested Popover</ion-button>
+  <ion-popover trigger="nestedBtn" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content>
+        <ion-list>
+          <ion-item [button]="true" [detail]="false">
+            <ion-label>Option 1</ion-label>
+          </ion-item>
+          <ion-item [button]="true" [detail]="false">
+            <ion-label>Option 2</ion-label>
+          </ion-item>
+          <ion-item [button]="true" [detail]="true" id="nestedTrigger">
+            <ion-label>Option 3</ion-label>
+          </ion-item>
+          
+          <ion-popover trigger="nestedTrigger" [dismissOnSelect]="true" side="end">
+            <ng-template>
+              <ion-content>
+                <ion-item [button]="true">
+                  <ion-label>Nested Option</ion-label>
+                </ion-item>
+                <ion-item [button]="true">
+                  <ion-label>Nested Option</ion-label>
+                </ion-item>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+  
+  <!-- Popover Controller -->
+  <ion-button size="full" color="success" (click)="openPopover()">Popover Controller</ion-button>
+
+</ion-content>

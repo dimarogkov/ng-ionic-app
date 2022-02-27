@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <!-- Default Segment -->
+  <ion-segment value="red" (ionChange)="segmentChanged($event)" style="margin-top: 20px;">
+    <ion-segment-button value="red">
+      <ion-label>Red</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="green">
+      <ion-label>Green</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="blue">
+      <ion-label>Blue</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Danger Color -->
+  <ion-segment value="red" color="danger" (ionChange)="segmentChanged($event)" style="margin-top: 20px;">
+    <ion-segment-button value="red">
+      <ion-label>Red</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="green">
+      <ion-label>Green</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="blue">
+      <ion-label>Blue</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Scrollable Segment -->
+  <ion-segment scrollable value="home" (ionChange)="segmentChanged($event)" style="margin-top: 20px;">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-content>

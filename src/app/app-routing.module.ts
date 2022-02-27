@@ -35,6 +35,42 @@ const routes: Routes = [
     path: 'plagins',
     loadChildren: () => import('./pages/plagins/plagins.module').then( m => m.PlaginsPageModule)
   },
+  {
+    path: 'modals',
+    loadChildren: () => import('./pages/modals/modals.module').then( m => m.ModalsPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'refresh',
+    loadChildren: () => import('./pages/refresh/refresh.module').then( m => m.RefreshPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./pages/toast/toast.module').then( m => m.ToastPageModule)
+  },
+  {
+    path: 'accordion',
+    loadChildren: () => import('./pages/accordion/accordion.module').then( m => m.AccordionPageModule)
+  },
+  {
+    path: 'ion-loading',
+    loadChildren: () => import('./pages/ion-loading/ion-loading.module').then( m => m.IonLoadingPageModule)
+  },
+  {
+    path: 'segment',
+    loadChildren: () => import('./pages/segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+  },
   
 ];
 
